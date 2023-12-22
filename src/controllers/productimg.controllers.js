@@ -9,9 +9,10 @@ const getAll=catchError(async(req, res)=>{
 });
 const create=catchError(async(req, res)=>{
     const {path, filename}=req.file;
+    console.log(path)
     const {url, public_id}=await uploadToCloudinary(path, filename)
     const image=await Productimg.create({url, publicId: public_id})
-    console.log(image)
+    
     return res.status(200).json(image)
 });
 
