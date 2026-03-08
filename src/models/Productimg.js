@@ -11,7 +11,6 @@ const Productimg=sequelize.define("productimg", {
         allowNull: false
     },
   
-  
 },
 {
     timestamps:false
